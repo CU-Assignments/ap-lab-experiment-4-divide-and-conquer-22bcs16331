@@ -1,0 +1,26 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        int n=0;
+        int o=0;
+        int t=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
+                n++;
+            }else if(nums[i]==1){
+                o++;
+            }else{
+                t++;
+            }
+        }
+        for(int j=0;j<nums.length;j++){
+            if(j<n){
+                nums[j]=0;
+            }else if(j<n+o){
+                nums[j]=1;
+            }else {
+                nums[j]=2;
+            }
+        }
+    }
+}
+
